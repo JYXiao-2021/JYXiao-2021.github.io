@@ -1,0 +1,32 @@
+<p>Hello </p>
+<p>This is Yixiao Jiang </p>
+<p>jyx37254015@gwu.edu</p>
+<h3>Long Answers</h3>
+<ul>
+  <li><b>Interest in App Inventor </b></li>
+  <p>I am interested in this app because I did it as my first app. It's very helpful to teach beginners what is the logical way to develop an app. 
+    App Inventor allows users to create applications without needing to have advanced programming skills.
+    It can be a powerful tool for beginners who want to learn how to code.</p>
+  <li><b>Interest in introductory programming </b></li>
+  <p> I do not have personal experiences. However, App Inventor has a user-friendly interface that can be easily understood by beginners, 
+    which makes it an ideal platform for introducing programming concepts.</p>
+  <li><b>Proposed summer project </b></li>
+  <p> I am interested in the idea of creating a new dialog box for Project Properties. I propose to create a new dialog box for Project Properties in the designer view of the application. This will allow the user to easily access and modify project-wide properties such as the App Name and Theme without the need to navigate through the individual components.
+</p>
+  <li><b>Experience with the development tools</b></li>
+  <p> I am familiar with the Java language. I can use it to develop applications. Also, I know the basic of GWT.</p>
+  <li><b>Experience with teams, online developer communities and large code bases</b></li>
+  <p> I did experience developing applications with a team but not online developer communities and large code bases.
+    I am looking for this opportunity to join the big program. When I collaborate  with others, I am nice and do my best.
+</ul>
+<h3>Challenge 2:Design challenge -- Enhancing the Camera operation</h3>
+<p>after researching the issue with the 'useFront' property of the Camera component, it appears that the property is no longer functional due to changes in the Android SDK. 
+  More specifically, the Camera.open() method used by App Inventor to access the camera hardware is no longer supported in newer versions of Android. Instead, the Android Camera API now requires the use of the Camera2 API, which offers more advanced features and greater control over camera settings.
+To enable automatic picture taking in the Camera component, I would propose adding a new property called 'autoCapture' that, when set to true, would automatically capture an image when the camera preview is started. Additionally, a new method called 'takePicture()' could be added to allow for manual picture capture at any time.
+To implement these changes, I would create a new extension for the Camera component that extends the existing Camera component and adds the new properties and methods. The extension would need to include modifications to the following files in the source tree:
+Camera.java: This file defines the Camera component and its properties and methods. I would add a new property called 'autoCapture' and a new method called 'takePicture()' to this file.
+CameraUtil.java: This file contains utility methods used by the Camera component. I would modify this file to include methods for automatic picture taking and manual picture capture.
+CameraComponent.java: This file contains the code that initializes and controls the Camera hardware. I would modify this file to handle automatic picture taking when the 'autoCapture' property is set to true, as well as to handle manual picture capture when the 'takePicture()' method is called.
+The modifications to these files would take advantage of the Camera2 API in the Android SDK to implement automatic picture taking and manual picture capture. For example, the CameraUtil.java file would use the Camera2 API's ImageReader class to capture images automatically and the CameraComponent.java file would use the Camera2 API's CaptureRequest class to initiate manual picture capture.
+Overall, my design for extending the Camera component would make it more versatile and user-friendly, allowing for automatic picture taking and manual picture capture without requiring user intervention for each shot.
+</p>
